@@ -1,11 +1,11 @@
 # AdventOfCode
 
 [![About](https://img.shields.io/badge/Advent%20of%20Code-2019-brightgreen)](https://adventofcode.com/2019/about)
-[![Language](https://img.shields.io/badge/Language-NodeJS-orange)](https://www.nodejs.org//)
-[![Days completed](https://img.shields.io/badge/Days%20completed-6-red)](https://github.com/dejakobniklas/AdventOfCode/)
-[![Stars](https://img.shields.io/badge/Stars-12-yellow)](https://github.com/dejakobniklas/AdventOfCode/)
+[![Language](https://img.shields.io/badge/Language-NodeJS-orange)](https://www.nodejs.org/)
+[![Days completed](https://img.shields.io/badge/Days%20completed-1-red)](https://github.com/daanbreur/AdventofCode2019/)
+[![Stars](https://img.shields.io/badge/Stars-1-yellow)](https://github.com/daanbreur/AdventofCode2019/)
 
-networkException's Advent of Code challenges
+Daanbreurs's Advent of Code challenges
 
 ### Check out other solutions :D
 
@@ -17,3 +17,4 @@ networkException's Advent of Code challenges
 - joblo2213's [AdventOfCode2019](https://github.com/joblo2213/AdventOfCode2019)
 - FeldiM's [AdventOfCode19](https://github.com/feldim2425/AdventOfCode19)
 - derkalaender's [AdventOfCode](https://github.com/derkalaender/AdventOfCode)
+- networkException's [AdventOfCode](https://github.com/dejakobniklas/AdventOfCode)
