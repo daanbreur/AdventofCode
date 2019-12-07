@@ -1,16 +1,10 @@
 const fs = require("fs");
-let done = false;
 
 fs.readFile("./input.txt", "utf8", (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
   array = data.split(",");
 
-  let firstElementCounter = 0,
-    secondElementCounter = 0;
-
+  let firstElementCounter = 0;
+  let secondElementCounter = 0;
   while (firstElementCounter <= 99 && secondElementCounter <= 99) {
     array[1] = firstElementCounter.toString();
     array[2] = secondElementCounter.toString();
@@ -37,6 +31,7 @@ function parseIntCode(array) {
       const firstElement = parseInt(array[count + 1]),
         secondElement = parseInt(array[count + 2]),
         overrideElement = parseInt(array[count + 3]);
+      let done = false;
       switch (parseInt(opcode)) {
         case 1:
           array[overrideElement] = (
