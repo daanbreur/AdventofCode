@@ -3,8 +3,8 @@ const fs = require("fs");
 fs.readFile("./input.txt", "utf8", (err, data) => {
   array = data.split(",");
 
-  let firstElementCounter = 0;
-  let secondElementCounter = 0;
+  let firstElementCounter = 0,
+    secondElementCounter = 0;
   while (firstElementCounter <= 99 && secondElementCounter <= 99) {
     array[1] = firstElementCounter.toString();
     array[2] = secondElementCounter.toString();

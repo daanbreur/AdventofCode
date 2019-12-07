@@ -11,12 +11,11 @@ rl.on("line", mass => {
 
   var sum = 0;
 
-  var thisMass = mass;
-  var thisMassFuel = Math.floor(thisMass / 3) - 2;
+  var fuel = Math.floor(mass / 3) - 2;
 
-  while (thisMassFuel >= 0) {
-    sum += thisMassFuel;
-    thisMassFuel = Math.floor(thisMassFuel / 3) - 2;
+  while (fuel >= 0) {
+    sum += fuel;
+    fuel = Math.floor(fuel / 3) - 2;
   }
 
   output += sum;
@@ -24,5 +23,5 @@ rl.on("line", mass => {
   console.log("Added Fuel: " + sum);
   console.log("New Fuel: " + output);
 });
-
+console.log("-----------------------");
 console.log("[Day 1] Part 2: The second element's value is" + output);
