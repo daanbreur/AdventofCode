@@ -32,8 +32,10 @@ function main() {
     console.log("[Day 1] Part 2 New Fuel : " + output2);
   });
 
-  console.log("-----------------------");
-  console.log("[Day 1] Part 1: The first element's value is" + output);
-  console.log("[Day 1] Part 2: The second element's value is" + output2);
-  console.log("-----------------------");
+  rl.on("close", () => {
+    console.log("-----------------------");
+    console.log("[Day 1] Part 1: The first element's value is " + output);
+    console.log("[Day 1] Part 2: The second element's value is " + output2);
+    console.log("-----------------------");
+  });
 }
