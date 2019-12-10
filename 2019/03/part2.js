@@ -4,6 +4,8 @@ let data = fs
   .toString()
   .split("\n");
 
+module.exports = main;
+
 function getWirePoints(wireMovements) {
   let wirePoints = new Map();
   let x = 0,
@@ -71,8 +73,20 @@ function findMinimumTotalDistanceTravelled(
   return { minimumTravelDistance, minKey };
 }
 
-console.log(
-  `[Day 3 Part 2] Answer is: ${
+function main() {
+  console.log(
+    `[Day 3 Part 2] Answer is: ${
+      findMinimumTotalDistanceTravelled(
+        getCrossOverPoints(
+          getWirePoints(data[0].split(",")),
+          getWirePoints(data[1].split(","))
+        ),
+        getWirePoints(data[0].split(",")),
+        getWirePoints(data[1].split(","))
+      ).minimumTravelDistance
+    }\n----- OBJECT -----`
+  );
+  console.log(
     findMinimumTotalDistanceTravelled(
       getCrossOverPoints(
         getWirePoints(data[0].split(",")),
@@ -80,16 +94,6 @@ console.log(
       ),
       getWirePoints(data[0].split(",")),
       getWirePoints(data[1].split(","))
-    ).minimumTravelDistance
-  } \n----- OBJECT -----\n`
-);
-console.log(
-  findMinimumTotalDistanceTravelled(
-    getCrossOverPoints(
-      getWirePoints(data[0].split(",")),
-      getWirePoints(data[1].split(","))
-    ),
-    getWirePoints(data[0].split(",")),
-    getWirePoints(data[1].split(","))
-  )
-);
+    )
+  );
+}

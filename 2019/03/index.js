@@ -79,4 +79,5 @@ function main() {
       )
     )}`
   );
+  require(`./part2`)();
 }
