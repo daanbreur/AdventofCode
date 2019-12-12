@@ -1,0 +1,49 @@
+const fs = require("fs");
+module.exports = main;
+
+function main() {
+  fs.readFile("./input.txt", "utf8", (err, data) => {
+    let array = data.split(",");
+
+    console.log(
+      `[Day 5] Part 1: The first element's value is ${parseIntCode(array)}`
+    );
+  });
+}
+
+function parseIntCode(array) {
+  let count = 0;
+  for (const opcode of array) {
+    if (count % 4 === 0) {
+      const firstElement = parseInt(array[count + 1]),
+        secondElement = parseInt(array[count + 2]),
+        overrideElement = parseInt(array[count + 3]);
+      let done = false;
+      switch (parseInt(opcode)) {
+        case 1:
+          array[overrideElement] = (
+            parseInt(array[firstElement]) + parseInt(array[secondElement])
+          ).toString();
+          break;
+        case 2:
+          array[overrideElement] = (
+            parseInt(array[firstElement]) * parseInt(array[secondElement])
+          ).toString();
+          break;
+        case 3:
+          array[firstElement] = "1";
+          break;
+        case 4:
+          console.log(
+            `[Day 5] Part 1: OUTPUT OF THE INTCODE 4 IS ${array[firstElement]}`
+          );
+          break;
+        case 99:
+          done = true;
+          break;
+      }
+      if (done) return array[0];
+    }
+    count++;
+  }
+}
