@@ -98,7 +98,7 @@ function parseIntCode(array, input) {
         if (
           (parameterMode[2] === "0"
             ? parseInt(array[firstParameter])
-            : firstParameter) ===
+            : firstParameter) ==
           (parameterMode[1] === "0"
             ? parseInt(array[secondParameter])
             : secondParameter)
