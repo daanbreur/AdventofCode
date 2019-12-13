@@ -1,24 +1,27 @@
-const fs = require("fs");
 module.exports = main;
 
-function main() {
-  fs.readFile("./input.txt", "utf8", (err, data) => {
-    let array = data.split(",");
-    const firstPart = parseIntCode(array, "1");
-    console.log(`[Day 5] Part 1: The first element's value is ${firstPart}`);
-    const secondPart = parseIntCode(array, "5");
-    console.log(`[Day 5] Part 2: The second element's value is ${secondPart}`);
-  });
+function main(data) {
+  let array = data.split(",");
+  const firstPart = parseIntCode(array, "1");
+  array = data.split(",");
+  const secondPart = parseIntCode(array, "5");
+  return [
+    {
+      message: "The diagnostic code without the 0s is",
+      value: firstPart
+    },
+    { message: "The diagnostic code for system ID 5 is", value: secondPart }
+  ];
 }
 
 function parseIntCode(array, input) {
   for (let i = 0; i < array.length; i++) {
     let opcode = array[i];
     while (opcode.split("").length < 5) opcode = `0${opcode}`;
-    const parameterMode = opcode.split(""),
-      firstParameter = parseInt(array[i + 1]),
-      secondParameter = parseInt(array[i + 2]),
-      overrideParameter = parseInt(array[i + 3]);
+    const parameterMode = opcode.split("");
+    const firstParameter = parseInt(array[i + 1]);
+    const secondParameter = parseInt(array[i + 2]);
+    const overrideParameter = parseInt(array[i + 3]);
     let done = false;
     switch (parseInt(opcode.substr(opcode.length - 2, opcode.length - 1))) {
       case 1:
@@ -62,9 +65,9 @@ function parseIntCode(array, input) {
             : firstParameter) !== 0
         )
           i =
-            parameterMode[1] === "0"
+            (parameterMode[1] === "0"
               ? parseInt(array[secondParameter])
-              : secondParameter;
+              : secondParameter) - 1;
         else i += 2;
         break;
       case 6:
@@ -74,9 +77,9 @@ function parseIntCode(array, input) {
             : firstParameter) === 0
         )
           i =
-            parameterMode[1] === "0"
+            (parameterMode[1] === "0"
               ? parseInt(array[secondParameter])
-              : secondParameter;
+              : secondParameter) - 1;
         else i += 2;
         break;
       case 7:
@@ -96,7 +99,7 @@ function parseIntCode(array, input) {
         if (
           (parameterMode[2] === "0"
             ? parseInt(array[firstParameter])
-            : firstParameter) ==
+            : firstParameter) ===
           (parameterMode[1] === "0"
             ? parseInt(array[secondParameter])
             : secondParameter)
