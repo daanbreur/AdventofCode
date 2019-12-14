@@ -4,7 +4,7 @@
 [![Language](https://img.shields.io/badge/Language-JavaScript-orange)](https://www.javascript.com/)
 [![Environment](https://img.shields.io/badge/Environment-Node.js-brightgreen)](https://nodejs.org/en/)
 [![Days completed](https://img.shields.io/badge/Days%20completed-5-red)](https://github.com/daanbreur/AdventofCode2019/)
-[![Stars](https://img.shields.io/badge/Stars-11-yellow)](https://github.com/daanbreur/AdventofCode2019/)
+[![Stars](https://img.shields.io/badge/Stars-12-yellow)](https://github.com/daanbreur/AdventofCode2019/)
 
 Daanbreurs's Advent of Code challenges
 
