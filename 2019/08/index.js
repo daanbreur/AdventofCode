@@ -21,13 +21,11 @@ function main() {
       two: (zeroCount.layer.match(/2/g) || []).length
     };
 
-    decodeImage(layers);
-
     console.log(
       `[2019 Day 8 Part 1] The First Elements value is ${numbersInLayer.one *
         numbersInLayer.two}`
     );
-    console.log(`[2019 Day 8 Part 2] The Image is\n ${decodeImage(layers)} `);
+    console.log(`[2019 Day 8 Part 2] The Image is\n${decodeImage(layers)} `);
   });
 }
 
