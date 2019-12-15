@@ -14,6 +14,7 @@ function main() {
 }
 
 function parseIntCode(array, input) {
+  let relBase = 0;
   for (let i = 0; i < array.length; i++) {
     let opcode = array[i];
     while (opcode.split("").length < 5) opcode = `0${opcode}`;
@@ -106,6 +107,10 @@ function parseIntCode(array, input) {
           array[overrideParameter] = "1";
         else array[overrideParameter] = "0";
         i += 3;
+        break;
+      case 9:
+        relBase += firstParameter;
+        i += 1;
         break;
       case 99:
         done = true;
