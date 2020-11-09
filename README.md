@@ -11,7 +11,6 @@ daanbreur's Advent of Code challenge code
 ### Check out other solutions :D
 - Trojaner's [AdventofCode](https://github.com/TrojanerHD/AdventofCode)
 - networkException's [AdventOfCode](https://github.com/dejakobniklas/AdventOfCode)
-*None yet because their repositories might change*
 
 ### Previous years
 
