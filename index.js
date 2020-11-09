@@ -1,4 +1,4 @@
-executeDay(2019, 10);
+executeDay(2020, 01);
 
 function executeDay(year, day) {
   year = year.toString();
