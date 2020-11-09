@@ -6,17 +6,13 @@
 [![Days completed](https://img.shields.io/badge/Days%20completed-0-red)](https://github.com/daanbreur/AdventofCode/)
 [![Stars](https://img.shields.io/badge/Stars-0-yellow)](https://github.com/daanbreur/AdventofCode/)
 
-Daanbreur's Advent of Code challenge code
+daanbreur's Advent of Code challenge code
 
 ### Check out other solutions :D
-
-
 - Trojaner's [AdventofCode](https://github.com/TrojanerHD/AdventofCode)
 - networkException's [AdventOfCode](https://github.com/dejakobniklas/AdventOfCode)
-- Hax's [advent-of-code](https://github.com/Schlauer-Hax/advent-of-code)
-- derNiklaas' [Advent-of-Code-2019](https://github.com/derNiklaas/Advent-of-Code-2019)
-- LeMoonStar's [AdventOfCode2019Solutions](https://github.com/LeMoonStar/AdventOfCode2019Solutions)
-- DCDragonCoder's [AdventOfCode2019](https://github.com/DragonCoder01/AdventOfCode2019)
-- joblo2213's [AdventOfCode2019](https://github.com/joblo2213/AdventOfCode2019)
-- FeldiM's [AdventOfCode19](https://github.com/feldim2425/AdventOfCode19)
-- derkalaender's [AdventOfCode](https://github.com/derkalaender/AdventOfCode)
+*None yet because their repositories might change*
+
+### Previous years
+
+- 2019 at commit `a0987dcbe36f74cfb78a89f56eddfb5ec5e2898a` ([view on github](https://github.com/daanbreur/AdventOfCode/tree/a0987dcbe36f74cfb78a89f56eddfb5ec5e2898a))
