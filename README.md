@@ -4,7 +4,7 @@
 [![Language](https://img.shields.io/badge/Language-Python-orange?style=flat-square)](https://www.python.org/)
 [![Environment](https://img.shields.io/badge/Environment-Pipenv-brightgreen?style=flat-square)](https://pypi.org/project/pipenv/)
 [![Days completed](https://img.shields.io/badge/Days%20completed-0-red?style=flat-square)](https://github.com/daanbreur/AdventofCode/)
-[![Stars](https://img.shields.io/badge/Stars-0-yellow?style=flat-square?style=flat-square)](https://github.com/daanbreur/AdventofCode/)
+[![Stars](https://img.shields.io/badge/Stars-0-yellow?style=flat-square)](https://github.com/daanbreur/AdventofCode/)
 
 daanbreur's Advent of Code challenge code
 
