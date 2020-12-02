@@ -13,5 +13,5 @@ def part2():
       for n in contents:
         if i + j + n == 2020: return i * j * n
 
-print('Output Part 1: {} '.format(part1()))
-print('Output Part 2: {} '.format(part2()))
+print('Day01 Part 1: {} '.format(part1()))
+print('Day02 Part 2: {} '.format(part2()))
