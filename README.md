@@ -2,8 +2,8 @@
 
 [![AoC](https://img.shields.io/badge/Advent%20of%20Code-2020-8803ec?style=for-the-badge)](https://adventofcode.com/)
 [![Language](https://img.shields.io/badge/Powered%20by-Python-ff69b4?style=for-the-badge)](https://en.wikipedia.org/wiki/Python_(programming_language))
-[![Days completed](https://img.shields.io/badge/Survived%20Days-3-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/main)
-[![Days completed](https://img.shields.io/badge/Stars%206-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/main)
+[![Days completed](https://img.shields.io/badge/Survived%20Days-3-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
+[![Days completed](https://img.shields.io/badge/Stars%206-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
 [![License: MIT](https://img.shields.io/github/license/daanbreur/AdventofCode?style=for-the-badge)](https://mit-license.org/)
 [![Twitter](https://img.shields.io/twitter/follow/portaalg?style=for-the-badge)](https://twitter.com/portaalg?ref_src=twsrc%5Etfw)
 
