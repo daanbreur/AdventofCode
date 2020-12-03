@@ -21,7 +21,7 @@ derNiklaas          | [AoC-2020](https://github.com/derNiklaas/AoC-2020 "goes to
 NetworkExceptions   | [AdventOfCode](https://github.com/networkException/AdventOfCode "goes to the repo")
 Lemoonstar          | [AoC20](https://github.com/LeMoonStar/AoC20 "goes to the repo")
 Trojaner            | [AdventofCode2020](https://github.com/TrojanerHD/AdventofCode2020 "goes to the repo")
-Jonay2000           | [aoc2020](https://github.com/jonay2000/AoC2020 "goes to the repo")
+Jonathan Dönszelmann| [aoc2020](https://github.com/jonay2000/AoC2020 "goes to the repo")
 
 ## Previous years
 
