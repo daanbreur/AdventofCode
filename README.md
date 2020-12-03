@@ -1,17 +1,27 @@
 # AdventOfCode
 
-[![About](https://img.shields.io/badge/Advent%20of%20Code-Currently%3A%202020-2e7d32?style=flat-square&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IHg9IjIyMS44MTgiIHk9IjM4MS43NzQiIHN0eWxlPSJmaWxsOiM4NDM3MEQ7IiB3aWR0aD0iNjguMzYzIiBoZWlnaHQ9IjEzMC4yMjYiLz4NCjxyZWN0IHg9IjI1NiIgeT0iMzgxLjc3NCIgc3R5bGU9ImZpbGw6IzVCMzcwRDsiIHdpZHRoPSIzNC4xNzkiIGhlaWdodD0iMTMwLjIyNiIvPg0KPHBvbHlnb24gc3R5bGU9ImZpbGw6IzJGNzU1RDsiIHBvaW50cz0iMzMyLjY4MSwyNjEuMzExIDE3OS4zMTksMjYxLjMxMSA4Ny4wOTcsMzkzLjI5MyA0MjQuOTAzLDM5My4yOTIgIi8+DQo8cG9seWdvbiBzdHlsZT0iZmlsbDojNDFBMTgxOyIgcG9pbnRzPSIzMDQuMjM3LDE0Mi41NzYgMjA3Ljc2MiwxNDIuNTc2IDExMy43MzYsMjc3LjEzOCAzOTguMjY0LDI3Ny4xMzggIi8+DQo8cG9seWdvbiBzdHlsZT0iZmlsbDojNzZEMUE5OyIgcG9pbnRzPSIyNTYsMCAzNjUuMzUyLDE1Ni40OTUgMTQ2LjY0OCwxNTYuNDk1ICIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=)](https://adventofcode.com/about)
-[![Language](https://img.shields.io/badge/Language-Python-orange?style=flat-square)](https://www.python.org/)
-[![Environment](https://img.shields.io/badge/Environment-Pipenv-brightgreen?style=flat-square)](https://pypi.org/project/pipenv/)
-[![Days completed](https://img.shields.io/badge/Days%20completed-0-red?style=flat-square)](https://github.com/daanbreur/AdventofCode/)
-[![Stars](https://img.shields.io/badge/Stars-0-yellow?style=flat-square)](https://github.com/daanbreur/AdventofCode/)
+[![AoC](https://img.shields.io/badge/Advent%20of%20Code-2020-8803ec?style=for-the-badge)](https://adventofcode.com/)
+[![Language](https://img.shields.io/badge/Powered%20by-Python-ff69b4?style=for-the-badge)](https://en.wikipedia.org/wiki/Python_(programming_language))
+[![Days completed](https://img.shields.io/badge/Survived%20Days-3-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/main)
+[![Days completed](https://img.shields.io/badge/Stars%206-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/main)
+[![License: MIT](https://img.shields.io/github/license/daanbreur/AdventofCode?style=for-the-badge)](https://mit-license.org/)
+[![Twitter](https://img.shields.io/twitter/follow/portaalg?style=for-the-badge)](https://twitter.com/portaalg?ref_src=twsrc%5Etfw)
 
-daanbreur's Advent of Code challenge code
+Advent of Code 2020 &nbsp;&nbsp; | &nbsp;&nbsp; Written in Python &nbsp;&nbsp; | &nbsp;&nbsp; By Daan Breur
+- - - -
 
-### Check out other solutions :D
-- Trojaner's [AdventofCode](https://github.com/TrojanerHD/AdventofCode)
-- networkException's [AdventOfCode](https://github.com/dejakobniklas/AdventOfCode)
+these are my personal solutions for the [Advent of Code 2020](https://adventofcode.com/2020) 🎄. the days are divided into single ``.py`` files _(including part 2)_.
 
-### Previous years
+## Have a look at some other people as well
+you can see the private leatherboard [here](https://adventofcode.com/2020/leaderboard/private/view/670567 "Link to https://adventofcode.com/"), if you are a member.
+Name                | Link
+--------------------|--------------------------------------------------------------------
+Andi                | [aoc2020](https://github.com/andi-makes/aoc2020 "goes to the repo")
+derNiklaas          | [AoC-2020](https://github.com/derNiklaas/AoC-2020 "goes to the repo")
+NetworkExceptions   | [AdventOfCode](https://github.com/networkException/AdventOfCode "goes to the repo")
+Lemoonstar          | [AoC20](https://github.com/LeMoonStar/AoC20 "goes to the repo")
+Trojaner            | [AdventofCode2020](https://github.com/TrojanerHD/AdventofCode2020 "goes to the repo")
+
+## Previous years
 
 - 2019 at commit `a0987dcbe36f74cfb78a89f56eddfb5ec5e2898a` ([view on github](https://github.com/daanbreur/AdventOfCode/tree/a0987dcbe36f74cfb78a89f56eddfb5ec5e2898a))
