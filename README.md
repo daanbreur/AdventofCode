@@ -5,7 +5,6 @@
 [![Days completed](https://img.shields.io/badge/Survived%20Days-5-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
 [![Stars](https://img.shields.io/badge/Stars%2010-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
 [![License: MIT](https://img.shields.io/github/license/daanbreur/AdventofCode?style=for-the-badge)](https://mit-license.org/)
-[![Twitter](https://img.shields.io/twitter/follow/portaalg?style=for-the-badge)](https://twitter.com/portaalg?ref_src=twsrc%5Etfw)
 
 Advent of Code 2020 &nbsp;&nbsp; | &nbsp;&nbsp; Written in Python &nbsp;&nbsp; | &nbsp;&nbsp; By Daan Breur
 - - - -
