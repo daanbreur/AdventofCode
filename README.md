@@ -2,10 +2,9 @@
 
 [![AoC](https://img.shields.io/badge/Advent%20of%20Code-2020-8803ec?style=for-the-badge)](https://adventofcode.com/)
 [![Language](https://img.shields.io/badge/Powered%20by-Python-ff69b4?style=for-the-badge)](https://en.wikipedia.org/wiki/Python_(programming_language))
-[![Days completed](https://img.shields.io/badge/Survived%20Days-3-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/main)
-[![Days completed](https://img.shields.io/badge/Stars%206-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/main)
+[![Days completed](https://img.shields.io/badge/Survived%20Days-5-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
+[![Stars](https://img.shields.io/badge/Stars%2010-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
 [![License: MIT](https://img.shields.io/github/license/daanbreur/AdventofCode?style=for-the-badge)](https://mit-license.org/)
-[![Twitter](https://img.shields.io/twitter/follow/portaalg?style=for-the-badge)](https://twitter.com/portaalg?ref_src=twsrc%5Etfw)
 
 Advent of Code 2020 &nbsp;&nbsp; | &nbsp;&nbsp; Written in Python &nbsp;&nbsp; | &nbsp;&nbsp; By Daan Breur
 - - - -
@@ -21,6 +20,7 @@ derNiklaas          | [AoC-2020](https://github.com/derNiklaas/AoC-2020 "goes to
 NetworkExceptions   | [AdventOfCode](https://github.com/networkException/AdventOfCode "goes to the repo")
 Lemoonstar          | [AoC20](https://github.com/LeMoonStar/AoC20 "goes to the repo")
 Trojaner            | [AdventofCode2020](https://github.com/TrojanerHD/AdventofCode2020 "goes to the repo")
+Jonathan Dönszelmann| [aoc2020](https://github.com/jonay2000/AoC2020 "goes to the repo")
 
 ## Previous years
 
