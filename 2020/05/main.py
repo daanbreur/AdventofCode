@@ -24,7 +24,7 @@ def part1():
 
 def part2():
   intList = [ i for i in range(0, 128*8) ]
-  intList = filter(filterFunc, intList)
+  intList = list(filter(filterFunc, intList))
   return intList[0]
 
 print('Day05 Part 1: {} '.format(part1()))
