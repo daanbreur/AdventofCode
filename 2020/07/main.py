@@ -17,7 +17,16 @@ def checkBags(bags, rules):
   print(f"{count} - {len(bags)}")
   if after > now: return checkBags(bags, rules)
   else: return bags
-  # stuff
+
+def sumBags(rules, name):
+  innerBags, count = None, 1
+  for bag in rules:
+    if bag['bag'] == name: innerBags = bag['content']
+  
+  for innerBag in innerBags:
+    if not innerBag.startswith("no"):
+      count += sumBags(rules, innerBag.replace(innerBag.split(" ")[0] + " ", "") + ("" if innerBag.endswith("s") else "s")) * int(innerBag.split(" ")[0])
+  return count
 
 def part1():
   rules = []
@@ -34,7 +43,15 @@ def part1():
   return len(bags)-1
 
 def part2():
-  pass
+  rules = []
+  for line in contents:
+    data = line.split(" contain ")
+    dataDict = dict()
+    dataDict['bag'] = data[0]
+    dataDict['content'] = data[1].replace(".", "").split(", ")
+    rules.append(dataDict)
+    print(dataDict)
+  return sumBags(rules, "shiny gold bags") -1
 
 print('Day07 Part 1: {} '.format(part1()))
 print('Day07 Part 2: {} '.format(part2()))
