@@ -15,7 +15,7 @@ def part1():
 
 def part2():
   mainList = []
-  target = part1
+  target = part1()
   for i in range(len(contents)):
     thisList = contents[i:].copy()
     for j in range(len(thisList)):
