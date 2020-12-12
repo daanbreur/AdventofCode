@@ -1,3 +1,5 @@
+import time
+
 with open('input.txt') as file:
   answerGroups = file.read().split('\n\n')
 
@@ -20,6 +22,8 @@ def part2():
       if all: count += 1
   return count
 
-
-print('Day04 Part 1: {} '.format(part1()))
-print('Day04 Part 2: {} '.format(part2()))
+start_time = time.time_ns()
+print('\033[38;2;60;179;113mDay06 Part 1: {} \033[0m'.format(part1()))
+print('\033[38;2;60;179;113mDay06 Part 2: {} \033[0m'.format(part2()))
+end_time = time.time_ns()
+print(f'\033[38;2;60;179;113mDay06: {(end_time - start_time)/1000000} ms \033[0m')

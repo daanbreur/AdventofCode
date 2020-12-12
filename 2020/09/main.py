@@ -1,3 +1,5 @@
+import time
+
 with open('input.txt') as file:
   contents = list(map(int, file.read().splitlines()))
 
@@ -24,5 +26,8 @@ def part2():
       elif target < sum(mainList): mainList.clear()
 
 
-print('Day09 Part 1: {} '.format(part1()))
-print('Day09 Part 2: {} '.format(part2()))
+start_time = time.time_ns()
+print('\033[38;2;60;179;113mDay09 Part 1: {} \033[0m'.format(part1()))
+print('\033[38;2;60;179;113mDay09 Part 2: {} \033[0m'.format(part2()))
+end_time = time.time_ns()
+print(f'\033[38;2;60;179;113mDay09: {(end_time - start_time)/1000000} ms \033[0m')

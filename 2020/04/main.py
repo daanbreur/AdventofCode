@@ -1,6 +1,7 @@
 # EXPECTED: byr, iyr, eyr, hgt, hcl, ecl, pid, cid
 from functools import reduce
 from re import match
+import time
 
 with open('input.txt') as file:
   passports = file.read().split('\n\n')
@@ -52,5 +53,8 @@ def part1():
   return countPart1, countPart2
 
 output1, output2 = part1()
-print('Day04 Part 1: {} '.format(output1))
-print('Day04 Part 2: {} '.format(output2))
+start_time = time.time_ns()
+print('\033[38;2;60;179;113mDay04 Part 1: {} \033[0m'.format(output1))
+print('\033[38;2;60;179;113mDay04 Part 2: {} \033[0m'.format(output2))
+end_time = time.time_ns()
+print(f'\033[38;2;60;179;113mDay04: {(end_time - start_time)/1000000} ms \033[0m')

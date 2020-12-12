@@ -1,3 +1,5 @@
+import time
+
 with open('input.txt') as file:
   contents = list(file.read().splitlines())
 
@@ -27,5 +29,8 @@ def part2():
   intList = list(filter(filterFunc, intList))
   return intList[0]
 
-print('Day05 Part 1: {} '.format(part1()))
-print('Day05 Part 2: {} '.format(part2()))
+start_time = time.time_ns()
+print('\033[38;2;60;179;113mDay05 Part 1: {} \033[0m'.format(part1()))
+print('\033[38;2;60;179;113mDay05 Part 2: {} \033[0m'.format(part2()))
+end_time = time.time_ns()
+print(f'\033[38;2;60;179;113mDay05: {(end_time - start_time)/1000000} ms \033[0m')

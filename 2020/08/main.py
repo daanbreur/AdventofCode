@@ -1,3 +1,5 @@
+import time
+
 with open('input.txt') as file:
   instructions = file.read().splitlines()
 
@@ -41,7 +43,7 @@ def part2():
       opcode = temp[index].split(' ')[0]
       arg = temp[index].split(' ')[1]
       history.append(index)
-      print(f"Instruction: {temp[index]}{getSpacer(10, len(temp[index]))}| OPCode: {opcode}{getSpacer(6, len(opcode))}Argument: {arg}")
+      #print(f"Instruction: {temp[index]}{getSpacer(10, len(temp[index]))}| OPCode: {opcode}{getSpacer(6, len(opcode))}Argument: {arg}")
       if opcode == "acc": accumulator += int(arg)
       if opcode == "jmp":
         index += int(arg)
@@ -49,6 +51,8 @@ def part2():
     if not stopped:
       return accumulator
     
-
-print('Day08 Part 1: {} '.format(part1()))
-print('Day08 Part 2: {} '.format(part2()))
+start_time = time.time_ns()
+print('\033[38;2;60;179;113mDay08 Part 1: {} \033[0m'.format(part1()))
+print('\033[38;2;60;179;113mDay08 Part 2: {} \033[0m'.format(part2()))
+end_time = time.time_ns()
+print(f'\033[38;2;60;179;113mDay08: {(end_time - start_time)/1000000}ms')
