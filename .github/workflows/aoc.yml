@@ -1,0 +1,34 @@
+name: Update AoC Badges
+on:
+  schedule:                                      # run workflow based on schedule
+    - cron: '0 6 1-25 12 *'                      # from the 1. December till 25. December every day at 6am
+    
+  workflow_dispatch:                             # allow to manually start the workflow 
+  
+# push:                                          # (disabled) run on push, be carefull with this setting 
+                                                 # as the workflow should only be triggered at a rate lower than
+                                                 # 4 times a houre to keep traffic on aoc site low 
+jobs:
+  Update:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - uses: actions/checkout@v2          
+      - uses: joblo2213/aoc-badges-action@v2.1
+        with:
+          userid: 497788
+          session: ${{ secrets.AOC_SESSION }}
+                
+          leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/670567.json'
+          file: 'README.md'                                                                              # The file that contains the badges
+#         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge iun your file.
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Stars%20)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge iun your file.
+          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Survived%20Days-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge iun your file.
+
+      - name: Push changes                        # Step that pushes these local changes back to your github repo
+        run: |
+          git config --global user.email "bot@daanbreur.systems"
+          git config --global user.name "Badge Updater"
+          git add .
+          git diff-index --quiet HEAD || git commit --message "Update badges"
+          git push
