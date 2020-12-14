@@ -19,15 +19,14 @@ def part1():
         # else: valueMasked += str( int(str(currentMask)[index]) & int(valueBin[index]) )
       memory[addr] = output
       # print(f'{op} {value}\n{valueBin}\n{currentMask}\n{output}')
-  for x in memory.values():
-    binSum += int(x,2)
+  for x in memory.values(): binSum += int(x,2)
   return binSum
 
 def part2():
   pass
 
 start_time = time.time_ns()
-print('\033[38;2;60;179;113mDay12 Part 1: {} \033[0m'.format(part1()))
-print('\033[38;2;60;179;113mDay12 Part 2: {} \033[0m'.format(part2()))
+print('\033[38;2;60;179;113mDay14 Part 1: {} \033[0m'.format(part1()))
+print('\033[38;2;60;179;113mDay14 Part 2: {} \033[0m'.format(part2()))
 end_time = time.time_ns()
-print(f'\033[38;2;60;179;113mDay12: {(end_time - start_time)/1000000} ms \033[0m')
+print(f'\033[38;2;60;179;113mDay14: {(end_time - start_time)/1000000} ms \033[0m')
