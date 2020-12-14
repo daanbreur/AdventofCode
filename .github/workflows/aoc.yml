@@ -9,7 +9,7 @@ on:
                                                  # as the workflow should only be triggered at a rate lower than
                                                  # 4 times a houre to keep traffic on aoc site low 
 jobs:
-  update:
+  Update:
     runs-on: ubuntu-latest
     steps:
     
@@ -27,8 +27,8 @@ jobs:
 
       - name: Push changes                        # Step that pushes these local changes back to your github repo
         run: |
-          git config --global user.email "<>"
-          git config --global user.name "aoc-badges-action"
+          git config --global user.email "bot@daanbreur.systems"
+          git config --global user.name "Badge Updater"
           git add .
           git diff-index --quiet HEAD || git commit --message "Update badges"
           git push
