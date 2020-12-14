@@ -2,8 +2,8 @@
 
 [![AoC](https://img.shields.io/badge/Advent%20of%20Code-2020-8803ec?style=for-the-badge)](https://adventofcode.com/)
 [![Language](https://img.shields.io/badge/Powered%20by-Python-ff69b4?style=for-the-badge)](https://en.wikipedia.org/wiki/Python_(programming_language))
-[![Days completed](https://img.shields.io/badge/Survived%20Days-1-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
-[![Stars](https://img.shields.io/badge/Stars%2001-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
+[![Days completed](https://img.shields.io/badge/Survived%20Days-10-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
+[![Stars](https://img.shields.io/badge/Stars%2022-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
 [![License: MIT](https://img.shields.io/github/license/daanbreur/AdventofCode?style=for-the-badge)](https://mit-license.org/)
 
 Advent of Code 2020 &nbsp;&nbsp; | &nbsp;&nbsp; Written in Python &nbsp;&nbsp; | &nbsp;&nbsp; By Daan Breur
