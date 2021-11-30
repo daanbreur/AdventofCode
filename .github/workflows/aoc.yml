@@ -1,30 +1,31 @@
 name: Update AoC Badges
 on:
   schedule:
-    - cron: '0 6 1-25 12 *'                      # from the 1. December till 25. December every day at 6am
+    - cron: '0 6 1-31 12 *'
   workflow_dispatch:
   
 jobs:
   Update:
     runs-on: ubuntu-latest
     steps:
-    
+      - name: Get current year
+        id: currentYear
+        run: echo "::set-output name=year::$(date +'%Y')"
       - uses: actions/checkout@v2          
-      - uses: joblo2213/aoc-badges-action@v2.1
+      - name: Update badges
+        uses: joblo2213/aoc-badges-action@v2.1
         with:
           userid: 497788
-          session: ${{ secrets.AOC_SESSION }}
-                
-          leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/670567.json'
-          file: 'README.md'                                                                              # The file that contains the badges
-#         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge iun your file.
-          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Stars%20)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge iun your file.
-          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Survived%20Days-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge iun your file.
-
-      - name: Push changes                        # Step that pushes these local changes back to your github repo
+          session: ${{ secrets.AOC_SESSION }}    
+          leaderboard: 'https://adventofcode.com/${{ steps.currentYear.outputs.year }}/leaderboard/private/view/670567.json'
+          file: 'README.md'
+#         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Stars%20)[0-9]+(?=-yellow)'
+          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Survived%20Days-)[0-9]+(?=-red)'
+      - name: Commit changes
         run: |
           git config --global user.email "git@daanbreur.systems"
           git config --global user.name "Badge Updater"
           git add .
-          git diff-index --quiet HEAD || git commit --message "Update badges"
+          git diff-index --quiet HEAD || git commit --message "[${{ steps.currentYear.outputs.year }}] Update badges"
           git push
