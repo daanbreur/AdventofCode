@@ -1,27 +1,33 @@
 # AdventOfCode
 
-[![AoC](https://img.shields.io/badge/Advent%20of%20Code-2020-8803ec?style=for-the-badge)](https://adventofcode.com/)
-[![Language](https://img.shields.io/badge/Powered%20by-Python-ff69b4?style=for-the-badge)](https://en.wikipedia.org/wiki/Python_(programming_language))
-[![Days completed](https://img.shields.io/badge/Survived%20Days-11-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
-[![Stars](https://img.shields.io/badge/Stars%2026-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
+[![AoC](https://img.shields.io/badge/Advent%20of%20Code-2021-8803ec?style=for-the-badge)](https://adventofcode.com/)
+[![Language](https://img.shields.io/badge/Powered%20by-Javascript-ff69b4?style=for-the-badge)](https://en.wikipedia.org/wiki/Javascript)
+[![Days completed](https://img.shields.io/badge/Survived%20Days-00-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
+[![Stars](https://img.shields.io/badge/Stars%2000-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
 [![License: MIT](https://img.shields.io/github/license/daanbreur/AdventofCode?style=for-the-badge)](https://mit-license.org/)
 
-Advent of Code 2020 &nbsp;&nbsp; | &nbsp;&nbsp; Written in Python &nbsp;&nbsp; | &nbsp;&nbsp; By Daan Breur
+Advent of Code 2021 &nbsp;&nbsp; | &nbsp;&nbsp; Written in Javascript &nbsp;&nbsp; | &nbsp;&nbsp; By Daan Breur
 - - - -
 
-these are my personal solutions for the [Advent of Code 2020](https://adventofcode.com/2020) 🎄. the days are divided into single ``.py`` files _(including part 2)_.
+these are my personal solutions for the [Advent of Code 2021](https://adventofcode.com/2021) 🎄. the days are divided into single ``.js`` files _(including part 2)_.
+
+## Launch the code!
+Windows:
+- Open the `2021` folder in your terminal with node installed.
+- Run `./launcher.exe` to run all challanges or `./launcher.exe repl` for a interactive menu
+
+Linux:
+- Open the `2021` folder in your terminal with node installed.
+- Run `./launcher` to run all challanges or `./launcher repl` for a interactive menu
 
 ## Have a look at some other people as well
-you can see the private leatherboard [here](https://adventofcode.com/2020/leaderboard/private/view/670567 "Link to https://adventofcode.com/"), if you are a member.
+you can see the private leatherboard [here](https://adventofcode.com/2021/leaderboard/private/view/670567 "Link to https://adventofcode.com/"), if you are a member.
 Name                | Link
 --------------------|--------------------------------------------------------------------
-Andi                | [aoc2020](https://github.com/andi-makes/aoc2020 "goes to the repo")
-derNiklaas          | [AoC-2020](https://github.com/derNiklaas/AoC-2020 "goes to the repo")
-NetworkExceptions   | [AdventOfCode](https://github.com/networkException/AdventOfCode "goes to the repo")
-Lemoonstar          | [AoC20](https://github.com/LeMoonStar/AoC20 "goes to the repo")
-Trojaner            | [AdventofCode2020](https://github.com/TrojanerHD/AdventofCode2020 "goes to the repo")
-Jonathan Dönszelmann| [aoc2020](https://github.com/jonay2000/AoC2020 "goes to the repo")
+derNiklaas          | [Advent-Of-Code-2021](https://github.com/derNiklaas/Advent-Of-Code-2021 "goes to the repo")
+Jonathan Donszelmann| [aoc2021](https://github.com/jonay2000/aoc2021 "goes to the repo")
 
 ## Previous years
 
 - 2019 at commit `a0987dcbe36f74cfb78a89f56eddfb5ec5e2898a` ([view on github](https://github.com/daanbreur/AdventOfCode/tree/a0987dcbe36f74cfb78a89f56eddfb5ec5e2898a))
+- 2020 at commit `dd7cadaef9f1110722bfd15da0f332c0e64bf9da` ([view on github](https://github.com/daanbreur/AdventOfCode/tree/dd7cadaef9f1110722bfd15da0f332c0e64bf9da))
