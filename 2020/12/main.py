@@ -20,7 +20,28 @@ def part1():
   return abs(eastPos) + abs(northPos)
 
 def part2():
-  pass
+  wpNorthPos,wpEastPos = 1, 10
+  northPos,eastPos = 0, 0
+  for i in contents:
+    direction, number = i[0], int(i[1:])
+    if direction == 'N': wpNorthPos+=number
+    elif direction == 'S': wpNorthPos-=number
+    elif direction == 'E': wpEastPos+=number
+    elif direction == 'W': wpEastPos-=number
+    elif direction == 'R': 
+      for i in range(int(number / 90)):
+        tmp = wpNorthPos
+        northPos = wpEastPos * -1
+        eastPos = tmp
+    elif direction == 'L': 
+      for i in range(int(number / 90)):
+        tmp = eastPos
+        eastPos = northPos * -1
+        northPos = tmp
+    elif direction == 'F':
+      northPos = wpNorthPos * number
+      eastPos = wpEastPos * number
+  return abs(northPos) + abs(eastPos)
 
 start_time = time.time_ns()
 print('\033[38;2;60;179;113mDay12 Part 1: {} \033[0m'.format(part1()))
