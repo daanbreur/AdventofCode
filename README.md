@@ -1,15 +1,15 @@
 # AdventOfCode
 
 [![AoC](https://img.shields.io/badge/Advent%20of%20Code-2021-8803ec?style=for-the-badge)](https://adventofcode.com/)
-[![Language](https://img.shields.io/badge/Powered%20by-Javascript-ff69b4?style=for-the-badge)](https://en.wikipedia.org/wiki/Javascript)
+[![Language](https://img.shields.io/badge/Powered%20by-Python-ff69b4?style=for-the-badge)](https://en.wikipedia.org/wiki/Python_(programming_language))
 [![Days completed](https://img.shields.io/badge/Survived%20Days-00-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
 [![Stars](https://img.shields.io/badge/Stars%2000-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
 [![License: MIT](https://img.shields.io/github/license/daanbreur/AdventofCode?style=for-the-badge)](https://mit-license.org/)
 
-Advent of Code 2021 &nbsp;&nbsp; | &nbsp;&nbsp; Written in Javascript &nbsp;&nbsp; | &nbsp;&nbsp; By Daan Breur
+Advent of Code 2021 &nbsp;&nbsp; | &nbsp;&nbsp; Written in Python &nbsp;&nbsp; | &nbsp;&nbsp; By Daan Breur
 - - - -
 
-these are my personal solutions for the [Advent of Code 2021](https://adventofcode.com/2021) 🎄. the days are divided into single ``.js`` files _(including part 2)_.
+these are my personal solutions for the [Advent of Code 2021](https://adventofcode.com/2021) 🎄. the days are divided into single ``.py`` files _(including part 2)_.
 
 ## Launch the code!
 Windows:

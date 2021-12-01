@@ -8,7 +8,7 @@ def main():
   print('\033[0;31m ~\033[0;35m~\033[0;33m  Solutions by daanbreur \033[0;35m~\033[0;31m~\n')
 
   if len(sys.argv) != 2:
-    print(f'{getANSIEscape(60, 179, 113)}REPL mode. Please enter a command.')
+    print(f'{getANSIEscape(60, 179, 113)}EVERYTHING mode.')
     for i in range(1,25):
       runDay(str(i))
     return
@@ -32,7 +32,7 @@ def getANSIEscape(r,g,b):
   return f"\033[38;2;{r};{g};{b}m"
 
 def runDay(day: str):
-  os.system(f'cd {day.zfill(2)} && node main.js')
+  os.system(f'cd {day.zfill(2)} && python main.py')
 
 
 main()
