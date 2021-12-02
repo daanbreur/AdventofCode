@@ -26,7 +26,7 @@ def part2():
 
 
 start_time = time.time_ns()
-print('\033[38;2;60;179;113mDay14 Part 1: {} \033[0m'.format(part1()))
-print('\033[38;2;60;179;113mDay14 Part 2: {} \033[0m'.format(part2()))
+print('\033[38;2;60;179;113mDay1 Part 1: {} \033[0m'.format(part1()))
+print('\033[38;2;60;179;113mDay1 Part 2: {} \033[0m'.format(part2()))
 end_time = time.time_ns()
-print(f'\033[38;2;60;179;113mDay14: {(end_time - start_time)/1000000} ms \033[0m')
+print(f'\033[38;2;60;179;113mDay1: {(end_time - start_time)/1000000} ms \033[0m')
