@@ -1,18 +1,16 @@
 import time
 import math
-with open("input.txt") as file:
-  data = list(file.read().splitlines())
 
-def part1():
-  ones, zeros = [0 for _ in range(len(data[0]))], [0 for _ in range(len(data[0]))]
+def part1(inputData):
+  ones, zeros = [0 for _ in range(len(inputData[0]))], [0 for _ in range(len(inputData[0]))]
   gamma_rate, epsilon_rate = "", ""
-  for byte in data:
+  for byte in inputData:
     for i, bit in enumerate(byte):
       if bit == '1': ones[i] += 1 
       else: zeros[i] += 1
   print(f"{ones} {zeros}")
     
-  for i in range(len(data[0])):
+  for i in range(len(inputData[0])):
     gamma_rate += "1" if ones[i] >= zeros[i] else "0"
     epsilon_rate += "1" if zeros[i] > ones[i] else "0"
 
@@ -22,8 +20,8 @@ def part1():
 
   return int(gamma_rate,2) * int(epsilon_rate,2)
 
-def part2():
-  o2rating, co2rating = data.copy(), data.copy()
+def part2(inputData):
+  o2rating, co2rating = inputData.copy(), inputData.copy()
   o2ratingCount = [[0 for _ in range(len(o2rating[0]))],[0 for _ in range(len(o2rating[0]))]]
   co2ratingCount = [[0 for _ in range(len(co2rating[0]))],[0 for _ in range(len(co2rating[0]))]]
 
@@ -58,8 +56,10 @@ def part2():
 
   return int(o2rating[0],2) * int(co2rating[0],2)
 
-start_time = time.time_ns()
-print('\033[38;2;60;179;113mDay2 Part 3: {} \033[0m'.format(part1()))
-print('\033[38;2;60;179;113mDay2 Part 3: {} \033[0m'.format(part2()))
-end_time = time.time_ns()
-print(f'\033[38;2;60;179;113mDay3: {(end_time - start_time)/1000000} ms \033[0m')
+if __name__ == '__main__':
+  with open("input.txt") as file: data = list(file.read().splitlines())
+  start_time = time.time_ns()
+  print('\033[38;2;60;179;113mDay3 Part 1: {} \033[0m'.format(part1(data)))
+  print('\033[38;2;60;179;113mDay3 Part 2: {} \033[0m'.format(part2(data)))
+  end_time = time.time_ns()
+  print(f'\033[38;2;60;179;113mDay3: {(end_time - start_time)/1000000} ms \033[0m')
