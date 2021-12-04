@@ -10,12 +10,7 @@ def playBoards():
         print(f"[i] Rolled Number {i}")
         gameboards = [ [ re.sub(f"^{str(i)}$", "x", k) for k in x] for x in gameboards ]
         for idx, gameboard in enumerate(gameboards):
-            if ''.join(gameboard[0:5]) == "xxxxx" or ''.join(gameboard[5:10]) == "xxxxx" or ''.join(gameboard[10:15]) == "xxxxx" or ''.join(gameboard[15:20]) == "xxxxx" or ''.join(gameboard[20:25]) == "xxxxx" or \
-                (gameboard[0]=="x" and gameboard[5]=="x" and gameboard[10]=="x" and gameboard[15]=="x" and gameboard[20]=="x") == True or \
-                (gameboard[1]=="x" and gameboard[6]=="x" and gameboard[11]=="x" and gameboard[16]=="x" and gameboard[21]=="x") == True or \
-                (gameboard[2]=="x" and gameboard[7]=="x" and gameboard[12]=="x" and gameboard[17]=="x" and gameboard[22]=="x") == True or \
-                (gameboard[3]=="x" and gameboard[8]=="x" and gameboard[13]=="x" and gameboard[18]=="x" and gameboard[23]=="x") == True or \
-                (gameboard[4]=="x" and gameboard[9]=="x" and gameboard[14]=="x" and gameboard[19]=="x" and gameboard[24]=="x") == True: 
+            if any(["".join(gameboard[i*5:i*5+5])=="xxxxx" for i in range(5)]) or any(["".join(gameboard[i::5])=="xxxxx" for i in range(5)]):
                 yield sum([int(i) for i in gameboard if type(i)== int or i.isdigit()]) * i
                 del gameboards[idx]
 
