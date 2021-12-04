@@ -1,11 +1,15 @@
-name: Update AoC Badges
+name: Update AoC Badges 🎄
 on:
   schedule:
     - cron: '0 6 1-31 12 *'
   workflow_dispatch:
+  push:
+    paths:
+      - '**/**/main.py'
   
 jobs:
   Update:
+    name: Update AoC Badges 🎄
     runs-on: ubuntu-latest
     steps:
       - name: Get current year
