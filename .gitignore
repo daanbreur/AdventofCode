@@ -1,3 +1,5 @@
 # Specify filepatterns you want git to ignore.
 
 githubupdate.bat
+__pycache__
+.pytest_cache
