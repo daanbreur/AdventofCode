@@ -3,3 +3,4 @@
 githubupdate.bat
 __pycache__
 .pytest_cache
+.venv
