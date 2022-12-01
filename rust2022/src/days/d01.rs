@@ -46,17 +46,18 @@ impl DayImpl<Data> for Day<CURRENT_DAY> {
     }
 
     fn two(&self, data: &mut Data) -> Answer {
-        let mut answer: u64 = 0;
+        let mut answer: Vec<u64> = Vec::new();
         data.iter().for_each(|data| {
             let mut sum: u64 = 0;
             data.iter().for_each(|n| {
                 sum += n;
             });
-            if sum > answer {
-                answer = sum;
-            }
+            answer.push(sum);
         });
+        answer.sort_by(|a, b| b.cmp(a));
 
-        Answer::Number(answer as u64)
+        let final_answer: u64 = answer[0] +  answer[1] +  answer[2];
+
+        Answer::Number(final_answer as u64)
     }
 }
