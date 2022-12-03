@@ -1,5 +1,3 @@
-use crate::dprintln;
-
 use super::{Answer, Day, DayImpl};
 
 const CURRENT_DAY: u8 = 1;
