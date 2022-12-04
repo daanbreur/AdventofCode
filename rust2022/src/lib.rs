@@ -53,10 +53,32 @@ pub fn get_verbosity() -> Verbosity {
 }
 
 #[macro_export]
+macro_rules! vprint {
+    ($($arg:tt)*) => {
+        if $crate::get_verbosity() ==  $crate::Verbosity::Verbose || $crate::get_verbosity() ==  $crate::Verbosity::Developement {
+            print!(
+                $($arg)*
+            )
+        }
+    };
+}
+
+#[macro_export]
 macro_rules! vprintln {
     ($($arg:tt)*) => {
         if $crate::get_verbosity() ==  $crate::Verbosity::Verbose || $crate::get_verbosity() ==  $crate::Verbosity::Developement {
             println!(
+                $($arg)*
+            )
+        }
+    };
+}
+
+#[macro_export]
+macro_rules! dprint {
+    ($($arg:tt)*) => {
+        if $crate::get_verbosity() == $crate::Verbosity::Developement  {
+            print!(
                 $($arg)*
             )
         }
