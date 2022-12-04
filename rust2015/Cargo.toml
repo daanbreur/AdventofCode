@@ -12,3 +12,4 @@ aoc-macro = {path="aoc-macro"}
 reqwest = { version = "0.11", features=["cookies", "blocking"] }
 mut_static="5.0"
 lazy_static="1.4"
+rust-crypto = "^0.2"
