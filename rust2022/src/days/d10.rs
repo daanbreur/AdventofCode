@@ -11,7 +11,7 @@ impl DayImpl<Data> for Day<CURRENT_DAY> {
     }
 
     fn expected_results() -> (Answer, Answer) {
-        (Answer::Number(13140), Answer::Number(0))
+        (Answer::Number(13140), Answer::String(String::new()))
     }
 
     fn init(input: &str) -> (Self, Data) {
@@ -65,6 +65,7 @@ impl DayImpl<Data> for Day<CURRENT_DAY> {
         let mut instuction_counter = 0;
         let mut crt_counter = 0;
         let mut register_x: i64 = 1;
+        let mut crt_image: String = String::new();
 
         for line in data {
             let mut instruction = line.split(" ");
@@ -75,17 +76,40 @@ impl DayImpl<Data> for Day<CURRENT_DAY> {
                 "noop" => {
                     vprint!("oldCRT: {:?} - oldIC: {:?} - oldRX: {:?} ", crt_counter, instuction_counter, register_x);
                     instuction_counter += 1;
+                    if crt_counter%40 == 0 {
+                        crt_image.push('\n');
+                    }
+                    if ((crt_counter%40) - register_x).abs() <= 1 {
+                        crt_image.push('█');
+                    } else {
+                        crt_image.push(' ');
+                    }
+                    crt_counter += 1;
 
                     vprintln!(" |  CRT: {:?} - IC: {:?} - RX: {:?}", crt_counter, instuction_counter, register_x);
                 },
                 "addx" => {
                     instuction_counter += 1;
-                    if instuction_counter == 20 || instuction_counter == 60 || instuction_counter == 100 || instuction_counter == 140 || instuction_counter == 180 || instuction_counter == 220 {
+                    if crt_counter%40 == 0 {
+                        crt_image.push('\n');
                     }
+                    if ((crt_counter%40) - register_x).abs() <= 1 {
+                        crt_image.push('█');
+                    } else {
+                        crt_image.push(' ');
+                    }
+                    crt_counter += 1;
+
                     instuction_counter += 1;
-                    if instuction_counter == 20 || instuction_counter == 60 || instuction_counter == 100 || instuction_counter == 140 || instuction_counter == 180 || instuction_counter == 220 {
-                        
+                    if crt_counter%40 == 0 {
+                        crt_image.push('\n');
                     }
+                    if ((crt_counter%40) - register_x).abs() <= 1 {
+                        crt_image.push('█');
+                    } else {
+                        crt_image.push(' ');
+                    }
+                    crt_counter += 1;
                     register_x += data.unwrap().parse::<i64>().unwrap();
                 },
                 _ => unreachable!(),
@@ -93,7 +117,7 @@ impl DayImpl<Data> for Day<CURRENT_DAY> {
         }
 
 
-        Answer::String(String::new())
+        Answer::String(crt_image)
     }
 }
 
