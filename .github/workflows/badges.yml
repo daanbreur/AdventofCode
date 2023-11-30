@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - '**/**/main.py'
+      - '**/**.rs'
   
 jobs:
   Update:
