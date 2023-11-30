@@ -5,7 +5,7 @@ const CURRENT_DAY: u8 = 21;
 type Data = Vec<u64>;
 impl DayImpl<Data> for Day<CURRENT_DAY> {
     fn init_test() -> (Self, Data) {
-        Self::init(&include_str!("test_inputs/test21.txt").to_owned())
+        Self::init(include_str!("test_inputs/test21.txt"))
     }
 
     fn expected_results() -> (Answer, Answer) {

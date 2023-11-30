@@ -1,6 +1,3 @@
-// Nightly features
-// #![feature(int_abs_diff)]
-
 use crate::days::Answer;
 use crate::days::Day;
 use crate::days::DayImpl;
@@ -16,7 +13,7 @@ mod days;
 pub enum Verbosity {
     None,
     Verbose,
-    Developement,
+    Development,
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -53,32 +50,10 @@ pub fn get_verbosity() -> Verbosity {
 }
 
 #[macro_export]
-macro_rules! vprint {
-    ($($arg:tt)*) => {
-        if $crate::get_verbosity() ==  $crate::Verbosity::Verbose || $crate::get_verbosity() ==  $crate::Verbosity::Developement {
-            print!(
-                $($arg)*
-            )
-        }
-    };
-}
-
-#[macro_export]
 macro_rules! vprintln {
     ($($arg:tt)*) => {
         if $crate::get_verbosity() ==  $crate::Verbosity::Verbose || $crate::get_verbosity() ==  $crate::Verbosity::Developement {
             println!(
-                $($arg)*
-            )
-        }
-    };
-}
-
-#[macro_export]
-macro_rules! dprint {
-    ($($arg:tt)*) => {
-        if $crate::get_verbosity() == $crate::Verbosity::Developement  {
-            print!(
                 $($arg)*
             )
         }
@@ -123,7 +98,7 @@ fn dynamic_range_time_format(d: &Duration) -> String {
     }
 }
 
-pub fn run_day(day: u8, part: Part, input: &String) {
+pub fn run_day(day: u8, part: Part, input: &str) {
     println!("{} Day {}", "Starting".green().bold(), day);
     println!("{}", "-----------------------".green().bold());
     let (one, two, init_t, one_t, two_t) = match part {

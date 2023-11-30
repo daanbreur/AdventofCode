@@ -1,9 +1,9 @@
+use aoc23::{run_day, set_verbosity, test_day, Part, Verbosity};
 use clap::{App, AppSettings, Arg, SubCommand};
 use colored::*;
 use reqwest::blocking::Client;
 use reqwest::cookie::Jar;
 use reqwest::header::USER_AGENT;
-use rust2022::{run_day, set_verbosity, test_day, Part, Verbosity};
 use std::env;
 use std::fs;
 use std::path::Path;
@@ -13,6 +13,7 @@ use std::sync::Arc;
 // have been huge breaking changes, requiring me to rewrite the CLI completely
 // to be able to update Clap. As I am on a limited time schedule RN, I will
 // probably do this later on.
+// 2023-11-29: still haven't done this, maybe I'll do is this year.
 // TODO: Rewrite CLI and update Clap
 
 fn main() {
@@ -50,10 +51,10 @@ fn main() {
                 .help("Print verbose information")
                 .long("verbose")
                 .short("v")
-                .conflicts_with("developement"))
+                .conflicts_with("development"))
         .arg(
-            Arg::with_name("developement")
-                .help("Print developement information")
+            Arg::with_name("development")
+                .help("Print development information")
                 .long("dev")
                 .short("d")
                 .conflicts_with("verbose"))
@@ -64,12 +65,12 @@ fn main() {
             SubCommand::with_name("auto")
                 .about("Automatically download input from AoC using the provided session and run the solution.")
                 .arg(Arg::with_name("session")
-                    .help("The AoC browser session string. If not provided, uses the AOC_SESSION eviroment variable.")
+                    .help("The AoC browser session string. If not provided, uses the AOC_SESSION environment variable.")
                     .short("s")
                     .long("session")
                     .takes_value(true))
                 .arg(Arg::with_name("no_cache")
-                    .help("Dont cache the input, and delete any current cache for this day.")
+                    .help("Don't cache the input, and delete any current cache for this day.")
                     .short("N")
                     .long("no-cache")))
         .subcommand(
@@ -110,8 +111,8 @@ fn main() {
         set_verbosity(Verbosity::Verbose);
     }
 
-    if matches.args.contains_key("developement") {
-        set_verbosity(Verbosity::Developement);
+    if matches.args.contains_key("development") {
+        set_verbosity(Verbosity::Development);
     }
 
     match matches.subcommand() {
@@ -132,9 +133,9 @@ fn main() {
             let session: String = match c_matches {
                 Some(c_matches) => match c_matches.value_of("session") {
                     Some(v) => v.to_owned(),
-                    None => env::var("AOC_SESSION").expect("Neither a session argument nor the AOC_SESSION enviroment variable were provided."),
+                    None => env::var("AOC_SESSION").expect("Neither a session argument nor the AOC_SESSION environment variable were provided."),
                 },
-                None => env::var("AOC_SESSION").expect("Neither a session argument nor the AOC_SESSION enviroment variable were provided."),
+                None => env::var("AOC_SESSION").expect("Neither a session argument nor the AOC_SESSION environment variable were provided."),
             };
             let cache = if let Some(c_matches) = c_matches {
                 !c_matches.args.contains_key("no_cache")
@@ -206,7 +207,7 @@ fn download_input(day: u8, session: &String) -> Result<String, reqwest::Error> {
         panic!("Server error or invalid session.");
     }
 
-    Ok(response.text()?)
+    response.text()
 }
 
 fn get_auto_input(day: u8, session: &String, cache: bool) -> String {
@@ -220,7 +221,7 @@ fn get_auto_input(day: u8, session: &String, cache: bool) -> String {
                     let _ = fs::create_dir(Path::new("./.aoc23_cache"));
                     match fs::write(cache_path, &input) {
                         Ok(_) => {}
-                        Err(err) => println!("Warning! couldnt save input cache!{:?}", err),
+                        Err(err) => println!("Warning! couldn't save input cache!{:?}", err),
                     }
                     input
                 }
