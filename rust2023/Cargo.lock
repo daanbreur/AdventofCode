@@ -672,7 +672,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "rust2022"
+name = "rust2023"
 version = "0.1.0"
 dependencies = [
  "aoc-macro",

@@ -1,9 +1,9 @@
-use aoc23::{run_day, set_verbosity, test_day, Part, Verbosity};
 use clap::{App, AppSettings, Arg, SubCommand};
 use colored::*;
 use reqwest::blocking::Client;
 use reqwest::cookie::Jar;
 use reqwest::header::USER_AGENT;
+use rust2023::{run_day, set_verbosity, test_day, Part, Verbosity};
 use std::env;
 use std::fs;
 use std::path::Path;
