@@ -9,6 +9,6 @@ edition = "2021"
 clap = { version = "2.34", features = ["suggestions", "color", "wrap_help"] }
 colored = "2.0"
 aoc-macro = {path="aoc-macro"}
-reqwest = { version = "0.11", features=["cookies", "blocking"] }
+reqwest = { version = "0.12.24", features=["cookies", "blocking"] }
 mut_static="5.0"
 lazy_static="1.4"

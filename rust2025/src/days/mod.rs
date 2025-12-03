@@ -10,6 +10,7 @@ pub struct Day<const DAY: u8>;
 pub enum Answer {
     Number(u64),
     String(String),
+    #[allow(dead_code)]
     Bitmap(Vec<Vec<bool>>),
 }
 
@@ -120,7 +121,7 @@ where
     /// Compute part 1
     fn one(&self, data: &mut T) -> Answer;
 
-    /// Compue part 2
+    /// Compute part 2
     fn two(&self, data: &mut T) -> Answer;
 
     /// Parse input and messure the time it took
@@ -145,6 +146,7 @@ where
     }
 
     /// Compute both parts
+    #[allow(dead_code)]
     fn run(input: &str) -> (Answer, Answer)
     where
         Self: Sized,
@@ -154,6 +156,7 @@ where
     }
 
     /// Init and compute part 1
+    #[allow(dead_code)]
     fn run_one(input: &str) -> Answer
     where
         Self: Sized,
@@ -162,7 +165,8 @@ where
         day.one(&mut data)
     }
 
-    /// Init and compute part 1
+    /// Init and compute part 2
+    #[allow(dead_code)]
     fn run_two(input: &str) -> Answer
     where
         Self: Sized,
@@ -181,7 +185,7 @@ where
         (one, init_t, one_t)
     }
 
-    /// Init and compute part 1
+    /// Init and compute part 2
     fn run_two_timed(input: &str) -> (Answer, Duration, Duration)
     where
         Self: Sized,
