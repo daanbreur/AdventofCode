@@ -2,8 +2,8 @@
 
 [![AoC](https://img.shields.io/badge/Advent%20of%20Code-2023-8803ec?style=for-the-badge)](https://adventofcode.com/)
 [![Language](https://img.shields.io/badge/Powered%20by-Rust-ff69b4?style=for-the-badge)](https://en.wikipedia.org/wiki/Rust_language)
-[![Days completed](https://img.shields.io/badge/Survived%20Days-1-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
-[![Stars](https://img.shields.io/badge/Stars%202-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
+[![Days completed](https://img.shields.io/badge/Survived%20Days-2-red?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
+[![Stars](https://img.shields.io/badge/Stars%204-yellow?style=for-the-badge)](https://github.com/daanbreur/AdventofCode/find/master)
 [![License: MIT](https://img.shields.io/github/license/daanbreur/AdventofCode?style=for-the-badge)](https://mit-license.org/)
 [![Written by](https://img.shields.io/badge/By-Daan%20Breur-blue?style=for-the-badge)](https://github.com/daanbreur/)
 
