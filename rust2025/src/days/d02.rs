@@ -11,7 +11,7 @@ impl DayImpl<Data> for Day<CURRENT_DAY> {
     }
 
     fn expected_results() -> (Answer, Answer) {
-        (Answer::Number(1227775554), Answer::Number(0))
+        (Answer::Number(1227775554), Answer::Number(4174379265))
     }
 
     fn init(input: &str) -> (Self, Data) {
@@ -59,6 +59,29 @@ impl DayImpl<Data> for Day<CURRENT_DAY> {
     }
 
     fn two(&self, data: &mut Data) -> Answer {
-        Answer::Number(data.len() as u64)
+        let mut count: u64 = 0;
+
+        for &mut (start, end) in data.iter_mut() {
+            for id in start..=end {
+                let id_str: String = id.to_string();
+                let id_length = id_str.len();
+
+                for chunk_size in 1..=id_length/2 {
+                    if id_length % chunk_size != 0 { continue; }
+
+                    let chunk = &id_str[0..chunk_size];
+                    let repeats = id_length / chunk_size;
+
+                    if repeats < 2 { continue; }
+
+                    if chunk.repeat(repeats) == id_str {
+                        count += id;
+                        break;
+                    }
+                }
+            }
+        }
+
+        Answer::Number(count)
     }
 }
