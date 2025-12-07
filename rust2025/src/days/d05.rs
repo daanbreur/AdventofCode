@@ -20,6 +20,28 @@ impl Inventory {
 
         false
     }
+
+    fn count_fresh_ingredients(&self) -> u64 {
+        let mut ranges = self.fresh_ranges.clone();
+        ranges.sort_by_key(|r| r.0);
+
+        let (mut start, mut end) = ranges[0];
+        let mut total = 0;
+
+        for &(s, e) in ranges.iter().skip(1) {
+            if s <= end {
+                end = end.max(e);
+            } else {
+                total += end - start + 1;
+                start = s;
+                end = e;
+            }
+        }
+
+        total += end - start + 1;
+
+        total
+    }
 }
 
 type Data = Inventory;
@@ -65,6 +87,6 @@ impl DayImpl<Data> for Day<CURRENT_DAY> {
     }
 
     fn two(&self, data: &mut Data) -> Answer {
-        Answer::Number(0 as u64)
+        Answer::Number(data.count_fresh_ingredients() as u64)
     }
 }
